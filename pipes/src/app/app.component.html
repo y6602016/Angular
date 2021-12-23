@@ -1,0 +1,7 @@
+<p>{{ todaysDate | date : 'YYYY MMM dd'}}</p>
+<p>{{ cost | currency: 'TWD' }}</p>
+<p>{{ cost | double: 3: true }}</p>
+<p>{{ temperature | double | number: '1.2-3' }}</p>
+<pre>{{ pizza | json }}</pre>  
+
+<p *ngIf="(cost | double : 8) > 3000">Show me!</p>
