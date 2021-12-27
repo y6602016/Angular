@@ -7,12 +7,14 @@ import { CocktailService } from './cocktail.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  drinks:any[] = []
+
   // service, dependency injection
   constructor(private cocktail: CocktailService){}
 
   search(query: string) {
-    this.cocktail.search(query).subscribe(response => {
-      console.log(response);
+    this.cocktail.search(query).subscribe((response: any) => {
+      this.drinks = response.drinks;
     })
   }
 }
